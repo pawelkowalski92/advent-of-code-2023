@@ -1,4 +1,4 @@
-package com.github.pawelkowalski92.aoc.day1.calibration
+package com.github.pawelkowalski92.aoc.day01.calibration
 
 class LiteralSupportingCalibrationDecoder : DigitBasedCalibrationDecoder() {
 

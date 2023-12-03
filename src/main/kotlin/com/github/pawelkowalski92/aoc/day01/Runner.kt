@@ -1,7 +1,7 @@
-package com.github.pawelkowalski92.aoc.day1
+package com.github.pawelkowalski92.aoc.day01
 
-import com.github.pawelkowalski92.aoc.day1.calibration.LiteralSupportingCalibrationDecoder
-import com.github.pawelkowalski92.aoc.day1.calibration.SimpleCalibrationDecoder
+import com.github.pawelkowalski92.aoc.day01.calibration.LiteralSupportingCalibrationDecoder
+import com.github.pawelkowalski92.aoc.day01.calibration.SimpleCalibrationDecoder
 import com.github.pawelkowalski92.aoc.util.getResource
 
 class Runner {

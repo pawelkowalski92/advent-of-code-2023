@@ -1,19 +1,19 @@
-package com.github.pawelkowalski92.aoc.day2
+package com.github.pawelkowalski92.aoc.day02
 
-import com.github.pawelkowalski92.aoc.day2.game.Draw
-import com.github.pawelkowalski92.aoc.day2.game.GameParser
-import com.github.pawelkowalski92.aoc.day2.game.GameValidator
+import com.github.pawelkowalski92.aoc.day02.game.GameOptimizer
+import com.github.pawelkowalski92.aoc.day02.game.GameParser
+import com.github.pawelkowalski92.aoc.day02.game.SetPowerCalculator
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe
 
-class GameWithElfTest : ShouldSpec({
+class SecondGameWithElfTest : ShouldSpec({
 
-    should("summarize id of valid games") {
+    should("summarize power of minimum sets") {
         // given
-        val maximumDraw = Draw(red = 12, green = 13, blue = 14)
-        val gameWithElf = GameWithElf(
+        val gameWithElf = SecondGameWithElf(
             parser = GameParser(),
-            validator = GameValidator(maximumDraw)
+            optimizer = GameOptimizer(),
+            calculator = SetPowerCalculator()
         )
 
         // and
@@ -26,10 +26,10 @@ class GameWithElfTest : ShouldSpec({
         )
 
         // when
-        val result = gameWithElf.summarizeValidGames(input)
+        val result = gameWithElf.summarizePowerOfMinimumDraws(input)
 
         // then
-        result shouldBe 8
+        result shouldBe 2286
     }
 
 })

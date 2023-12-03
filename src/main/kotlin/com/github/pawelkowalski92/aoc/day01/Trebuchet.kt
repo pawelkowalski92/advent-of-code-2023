@@ -1,6 +1,6 @@
-package com.github.pawelkowalski92.aoc.day1
+package com.github.pawelkowalski92.aoc.day01
 
-import com.github.pawelkowalski92.aoc.day1.calibration.CalibrationDecoder
+import com.github.pawelkowalski92.aoc.day01.calibration.CalibrationDecoder
 
 class Trebuchet(
     private val decoder: CalibrationDecoder

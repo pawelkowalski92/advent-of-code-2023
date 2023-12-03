@@ -1,8 +1,8 @@
-package com.github.pawelkowalski92.aoc.day2
+package com.github.pawelkowalski92.aoc.day02
 
-import com.github.pawelkowalski92.aoc.day2.game.GameOptimizer
-import com.github.pawelkowalski92.aoc.day2.game.GameParser
-import com.github.pawelkowalski92.aoc.day2.game.SetPowerCalculator
+import com.github.pawelkowalski92.aoc.day02.game.GameOptimizer
+import com.github.pawelkowalski92.aoc.day02.game.GameParser
+import com.github.pawelkowalski92.aoc.day02.game.SetPowerCalculator
 
 class SecondGameWithElf(
     private val parser: GameParser,

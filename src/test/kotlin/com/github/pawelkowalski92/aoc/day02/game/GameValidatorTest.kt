@@ -1,4 +1,4 @@
-package com.github.pawelkowalski92.aoc.day2.game
+package com.github.pawelkowalski92.aoc.day02.game
 
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe

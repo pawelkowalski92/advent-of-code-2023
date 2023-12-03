@@ -1,4 +1,4 @@
-package com.github.pawelkowalski92.aoc.day2.game
+package com.github.pawelkowalski92.aoc.day02.game
 
 class GameOptimizer {
 
