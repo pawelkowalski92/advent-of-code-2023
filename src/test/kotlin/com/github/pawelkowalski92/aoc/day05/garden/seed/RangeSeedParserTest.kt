@@ -20,7 +20,7 @@ class RangeSeedParserTest : ShouldSpec({
         val result = seedParser.parseSeeds(input).toList()
 
         // then
-        result shouldContainAll listOf(79..<93, 55..<68).flatten()
+        result shouldContainAll listOf(79L..<93L, 55L..<68L).flatten()
     }
 
 })

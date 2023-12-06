@@ -20,7 +20,7 @@ class BasicSeedParserTest : ShouldSpec({
         val result = seedParser.parseSeeds(input).toList()
 
         // then
-        result shouldContainAll listOf(79, 14, 55, 13)
+        result shouldContainAll listOf(79L, 14L, 55L, 13L)
     }
 
 })
