@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ master ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  CI:
+    name: CI
+    runs-on: [ self-hosted, ubuntu-latest ]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - uses: gradle/wrapper-validation-action@v1
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Test with Gradle
+        run: ./gradlew clean check
+
+      - name: Junit report
+        uses: mikepenz/action-junit-report@v4
+        if: ${{ success() || failure() }}
+        with:
+          report_paths: '**/build/test-results/**/TEST-*.xml'
